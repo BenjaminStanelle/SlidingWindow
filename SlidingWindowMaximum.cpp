@@ -39,11 +39,11 @@ int main() {
 
 	//go through input array
 	while (R < nums_size) {
-		//while deque not empty and dq.front <
+		//while deque not empty and nums[dq.front] < nums[R]
 		while ((dq.size() != 0) && nums[dq.front()] < nums[R]) {
-			dq.pop_front();
+			dq.pop_front(); //pop the front
 		}
-		dq.push_back(R);
+		dq.push_back(R);	//push the index.
 
 		if (L > dq.front()) {
 			dq.pop_front();
